@@ -1,0 +1,13 @@
+EcommerceStore = artifacts.require("../contracts/EcommerceStore.sol");
+module.exports = function(callback) {
+    current_time = Math.round(new Date() / 1000);
+    amt_1 = web3.utils.toWei('1', 'ether');
+    EcommerceStore.deployed().then(function(i) { i.addProductToStore('测试truffle的develop', 'Cell Phones & Accessories', ['QmZsb9nLACC5zGhZp8ezeA9xMfikGQ6LSu3V3gTVnibeJa'], 'QmRa3BnvMUU6DxnLzxymAd7dweyWAYLzW3R99KkGCJAgRn', current_time, current_time + 400, (2 * amt_1).toString(), 0, 5).then(function(f) { console.log(f) }) });
+    EcommerceStore.deployed().then(function(i) { i.addProductToStore('iphone 5', 'Cell Phones & Accessories', ['QmZsb9nLACC5zGhZp8ezeA9xMfikGQ6LSu3V3gTVnibeJa'], 'QmRa3BnvMUU6DxnLzxymAd7dweyWAYLzW3R99KkGCJAgRn', current_time, current_time + 400, (2 * amt_1).toString(), 0, 5).then(function(f) { console.log(f) }) });
+    EcommerceStore.deployed().then(function(i) { i.addProductToStore('iphone 5s', 'Cell Phones & Accessories', ['QmZsb9nLACC5zGhZp8ezeA9xMfikGQ6LSu3V3gTVnibeJa'], 'QmRa3BnvMUU6DxnLzxymAd7dweyWAYLzW3R99KkGCJAgRn', current_time, current_time + 600, (3 * amt_1).toString(), 1, 10).then(function(f) { console.log(f) }) });
+    EcommerceStore.deployed().then(function(i) { i.addProductToStore('iphone 6', 'Cell Phones & Accessories', ['QmZsb9nLACC5zGhZp8ezeA9xMfikGQ6LSu3V3gTVnibeJa'], 'QmRa3BnvMUU6DxnLzxymAd7dweyWAYLzW3R99KkGCJAgRn', current_time, current_time + 14000, amt_1, 0, 6).then(function(f) { console.log(f) }) });
+    EcommerceStore.deployed().then(function(i) { i.addProductToStore('iphone 6s', 'Cell Phones & Accessories', ['QmZsb9nLACC5zGhZp8ezeA9xMfikGQ6LSu3V3gTVnibeJa'], 'QmRa3BnvMUU6DxnLzxymAd7dweyWAYLzW3R99KkGCJAgRn', current_time, current_time + 86400, (4 * amt_1).toString(), 1, 4).then(function(f) { console.log(f) }) });
+    EcommerceStore.deployed().then(function(i) { i.addProductToStore('iphone 7', 'Cell Phones & Accessories', ['QmZsb9nLACC5zGhZp8ezeA9xMfikGQ6LSu3V3gTVnibeJa'], 'QmRa3BnvMUU6DxnLzxymAd7dweyWAYLzW3R99KkGCJAgRn', current_time, current_time + 86400, (5 * amt_1).toString(), 1, 6).then(function(f) { console.log(f) }) });
+    EcommerceStore.deployed().then(function(i) { i.addProductToStore('Jeans', 'Clothing, Shoes & Accessories', ['QmZsb9nLACC5zGhZp8ezeA9xMfikGQ6LSu3V3gTVnibeJa'], 'QmRa3BnvMUU6DxnLzxymAd7dweyWAYLzW3R99KkGCJAgRn', current_time, current_time + 86400 + 86400 + 86400, (5 * amt_1).toString(), 1, 7).then(function(f) { console.log(f) }) });
+    EcommerceStore.deployed().then(function(i) { i.productIndex.call().then(function(f) { console.log(f) }) });
+}
