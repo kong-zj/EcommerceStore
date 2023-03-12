@@ -1,9 +1,9 @@
 truffle compile
 
+truffle develop
+
 truffle migrate --reset
 
- truffle develop
+truffle exec seed.js
 
- truffle exec seed.js
-
- truffle console
+truffle console
